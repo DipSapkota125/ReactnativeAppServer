@@ -39,6 +39,10 @@ cloudinary.config({
 //routes
 app.use("/api/v1", User);
 
+app.get("/", (req, res) => {
+  res.send("Server is working");
+});
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
