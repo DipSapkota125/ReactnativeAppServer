@@ -13,7 +13,7 @@ export const sendMail = async (email, subject, text) => {
   });
 
   const mailOptions = {
-    from: process.env.MAILTRAP_MAIL,
+    from: process.env.MAILTRAP_USER,
     to: email,
     subject,
     text,
