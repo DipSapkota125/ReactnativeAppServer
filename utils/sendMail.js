@@ -20,27 +20,24 @@ export const sendMail = async (email, subject, text) => {
   };
 
   await transporter.sendMail(mailOptions);
-
-  // await transporter.sendMail(
-  //   {
-  //     from: process.env.MAILTRAP_USER,
-  //     to: email,
-  //     subject,
-  //     text,
-  //   },
-  //   (error) => {
-  //     if (error) {
-  //       return console.log("There was an error: " + error);
-  //     }
-  //     console.log("Email sent successfully");
-  //   }
-  // );
-
-  // const mailOptions = {
-  //   from: process.env.SMPT_MAIL,
-  //   to: options.email,
-  //   subject: options.subject,
-  //   text: options.text,
-  // };
-  // await transporter.sendMail(mailOptions);
 };
+
+// import { createTransport } from "nodemailer";
+
+// export const sendMail = async (email, subject, text) => {
+//   const transport = createTransport({
+//     host: process.env.SMTP_HOST,
+//     port: process.env.SMTP_PORT,
+//     auth: {
+//       user: process.env.SMTP_USER,
+//       pass: process.env.SMTP_PASS,
+//     },
+//   });
+
+//   await transport.sendMail({
+//     from: process.env.SMTP_USER,
+//     to: email,
+//     subject,
+//     text,
+//   });
+// };
